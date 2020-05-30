@@ -2,8 +2,11 @@ package com.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@SpringBootApplication(exclude = CassandraAutoConfiguration.class)
 public class ProducerServiceApplication {
 
 	public static void main(String[] args) {
